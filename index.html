@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>AswassawExe - Latihan Manipulasi String Javascript</title>
+</head>
+
+<body>
+    <!-- Image and text -->
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <div class="navbar-brand">
+                <img src="aswassawexe_logo.webp" width="35" height="35" class="d-inline-block align-top mr-2" alt="">
+                AswassawExe
+            </div>
+            <!-- Button Mode Gelap -->
+            <div class="custom-control custom-switch wadah-tema-mode">
+                <input type="checkbox" class="custom-control-input" id="tema-mode">
+                <label class="custom-control-label" for="tema-mode">Light</label>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1 align="center">Latihan Manipulasi String Pada Javascript</h1>
+        <hr>
+        <!-- Fungsi length -->
+        <div class="fungsi_length">
+            <div class="card card-body card-content">
+                <label for="form_length">
+                    <h4><u>Fungsi length</u></h4>
+                </label>
+                <div class="form-row">
+                    <div class="col-9">
+                        Masukkan Karakter
+                        <input type="text" id="form_length" class="form-control" placeholder="Masukkan Karakter">
+                    </div>
+                    <div class="col-3">
+                        Hasil
+                        <input type="text" id="hasil_form_length" class="form-control" placeholder="Jumlah Huruf"
+                            disabled>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary mt-2 submit">Submit</button>
+            <button type="button" class="btn btn-primary mt-2 penjelasan" data-toggle="modal"
+                data-target="#modal_penjelasan">
+                Lihat Penjelasan
+            </button>
+        </div>
+
+        <!-- Fungsi slice() -->
+        <div class="fungsi_slice mt-4">
+            <div class="card card-body card-content">
+                <label for="form_slice">
+                    <h4><u>Fungsi slice()</u></h4>
+                </label>
+                <div class="form-group">
+                    Masukkan Karakter
+                    <input type="text" id="form_slice" class="form-control" placeholder="Masukkan Karakter">
+                </div>
+                <div class="form-row">
+                    <div class="col-2">
+                        Index Awal
+                        <input type="number" id="index_slice1" class="form-control" placeholder="Index Awal">
+                    </div>
+                    <div class="col-2">
+                        Index Akhir
+                        <input type="number" id="index_slice2" class="form-control" placeholder="Index Akhir">
+                    </div>
+                    <div class="col-8">
+                        Hasil
+                        <input type="text" id="hasil_form_slice" class="form-control" placeholder="Hasil" disabled>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary mt-2 submit">Submit</button>
+            <button type="button" class="btn btn-primary mt-2 penjelasan" data-toggle="modal"
+                data-target="#modal_penjelasan">
+                Lihat Penjelasan
+            </button>
+        </div>
+
+        <!-- Fungsi toUpperCase dan toLowerCase() -->
+        <div class="fungsi_upperlower mt-4">
+            <div class="card card-body card-content">
+                <label for="form_upperlower">
+                    <h4><u>Fungsi toUpperCase() dan toLowerCase()</u></h4>
+                </label>
+                <div class="form-row">
+                    <div class="col">
+                        Masukkan Karakter
+                        <input type="text" id="form_upperlower" class="form-control" placeholder="Masukkan Karakter">
+                    </div>
+                    <div class="col">
+                        Hasil
+                        <input type="text" id="hasil_upperlower" class="form-control" placeholder="Hasil" disabled>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary mt-2 submit toUpperCase">toUpperCase</button>
+            <button type="button" class="btn btn-primary mt-2 submit">toLowerCase</button>
+            <button type="button" class="btn btn-primary mt-2 penjelasan" data-toggle="modal"
+                data-target="#modal_penjelasan">
+                Lihat Penjelasan
+            </button>
+        </div>
+
+        <!-- Fungsi includes() -->
+        <div class="fungsi_includes mt-4">
+            <div class="card card-body card-content">
+                <label for="form_includes">
+                    <h4><u>Fungsi includes()</u></h4>
+                </label>
+                <div class="form-group">
+                    Masukkan Karakter
+                    <input type="text" id="form_includes" class="form-control" placeholder="Masukkan Karakter">
+                </div>
+                <div class="form-row">
+                    <div class="col-7">
+                        Karakter Yang Termasuk
+                        <input type="text" id="cari_includes" class="form-control" placeholder="Karakter Yang Termasuk">
+                    </div>
+                    <div class="col-2">
+                        Index Mulai
+                        <input type="number" id="index_includes" class="form-control" placeholder="Default: 0">
+                    </div>
+                    <div class="col-3">
+                        Hasil
+                        <input type="text" id="hasil_includes" class="form-control" placeholder="Hasil" disabled>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary mt-2 submit">Submit</button>
+            <button type="button" class="btn btn-primary mt-2 penjelasan" data-toggle="modal"
+                data-target="#modal_penjelasan">
+                Lihat Penjelasan
+            </button>
+        </div>
+
+        <!-- Fungsi padStart() dan padEnd() -->
+        <div class="fungsi_padstartend mt-4">
+            <div class="card card-body card-content">
+                <label for="form_padstartend">
+                    <h4><u>Fungsi padStart() dan padEnd()</u></h4>
+                </label>
+                <div class="form-group">
+                    Masukkan Karakter
+                    <input type="text" class="form-control" id="form_padstartend" placeholder="Masukkan Karakter">
+                </div>
+                <div class="form-row">
+                    <div class="col-2">
+                        Jumlah Pad
+                        <input type="number" id="jumlah_padstartend" class="form-control" placeholder="Default: 0">
+                    </div>
+                    <div class="col-2">
+                        Pengganti
+                        <input maxlength="1" type="text" id="ganti_padstartend" class="form-control"
+                            placeholder="Pengganti">
+                    </div>
+                    <div class="col-8">
+                        Hasil
+                        <input type="text" id="hasil_padstartend" class="form-control" placeholder="Hasil" disabled>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary mt-2 submit padStart">padStart</button>
+            <button type="button" class="btn btn-primary mt-2 submit">padEnd</button>
+            <button type="button" class="btn btn-primary mt-2 penjelasan" data-toggle="modal"
+                data-target="#modal_penjelasan">
+                Lihat Penjelasan
+            </button>
+        </div>
+
+        <!-- Fungsi startsWith() dan endsWith -->
+        <div class="fungsi_startendwith mt-4">
+            <div class="card card-body card-content">
+                <label for="form_startendwith">
+                    <h4><u>Fungsi startsWith() dan endsWith()</u></h4>
+                </label>
+                <div class="form-group">
+                    Masukkan Karakter
+                    <input type="text" class="form-control" id="form_startendwith" placeholder="Masukkan Karakter">
+                </div>
+                <div class="form-row">
+                    <div class="col-5">
+                        Karakter Yang Dimaksud
+                        <input type="text" id="cari_startendwith" class="form-control"
+                            placeholder="Karakter Yang Dimaksud">
+                    </div>
+                    <div class="col-2">
+                        Index Mulai
+                        <input type="number" id="index_startendwith" class="form-control" placeholder="Default: 0">
+                    </div>
+                    <div class="col-5">
+                        Hasil
+                        <input type="text" id="hasil_startendwith" class="form-control" placeholder="Hasil" disabled>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary mt-2 submit startsWith">startsWith</button>
+            <button type="button" class="btn btn-primary mt-2 submit">endsWith</button>
+            <button type="button" class="btn btn-primary mt-2 penjelasan" data-toggle="modal"
+                data-target="#modal_penjelasan">
+                Lihat Penjelasan
+            </button>
+        </div>
+
+        <!-- Fungsi repeat() -->
+        <div class="fungsi_repeat mt-4">
+            <div class="card card-body card-content">
+                <label for="form_repeat">
+                    <h4><u>Fungsi repeat()</u></h4>
+                </label>
+                <div class="form-row">
+                    <div class="col-10">
+                        Masukkan Karakter
+                        <input type="text" class="form-control" id="form_repeat" placeholder="Masukkan Karakter">
+                    </div>
+                    <div class="col-2">
+                        Jumlah Repeat
+                        <input type="text" id="jumlah_repeat" class="form-control" placeholder="Jumlah Repeat">
+                    </div>
+                </div>
+                <div class="form-group">
+                    Hasil
+                    <input type="text" class="form-control" id="hasil_repeat" placeholder="Hasil" disabled>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary mt-2 submit">Submit</button>
+            <button type="button" class="btn btn-primary mt-2 penjelasan" data-toggle="modal"
+                data-target="#modal_penjelasan">
+                Lihat Penjelasan
+            </button>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Modal Penjelasan Penggunaan Fungsi -->
+    <div class="modal fade berubah" id="modal_penjelasan">
+        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+                <div class="modal-header" id="modal_title">
+                    <h5 class="modal-title">Title Penjelasan</h5>
+                </div>
+                <div class="modal-body" id="modal_body">
+                    Isi Penjelasan
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
